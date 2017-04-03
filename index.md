@@ -23,6 +23,16 @@ Scenario: calculando o imposto de renda
     Then Eu tenho o valor do imposto "390"
 
 e nos steps fui aplicando a tecnica de tdd(fazer o teste falar,fazer o teste passar e refatora) o resultado:
+if (salario<=1710.78){
+			valor = 0;
+		}else if(salario>=1710.79 and salario<=2563.91){
+			valor = salario*0.075;
+		}else if(salario>=2563.92 and salario<=3418.59){
+			valor = salario*0.15;
+		}else if(salario>=3418.60 and salario<=4271.59){
+			valor = salario*0.225;
+		}else{valor = salario*0.275;
+        }
 
 
 Como o arquivo de Features ficou muito repetitivo, resovi atualiar para uma tabela. Com isso montei caso de teste para todas faixas do imposto de renda
