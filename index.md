@@ -12,7 +12,7 @@ Scenario: calculando o imposto de renda
     When Eu quero calcular o imposto de renda do salario "1600.0"
     Then Eu tenho o valor do imposto "0.0"
 
-  Scenario: calculando o imposto de renda
+    Scenario: calculando o imposto de renda
     Given Eu tenho um salario
     When Eu quero calcular o imposto de renda do salario "1800.0"
     Then Eu tenho o valor do imposto "135"
